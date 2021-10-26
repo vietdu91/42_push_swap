@@ -6,12 +6,11 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 13:00:43 by emtran            #+#    #+#             */
-/*   Updated: 2021/10/19 10:40:48 by emtran           ###   ########.fr       */
+/*   Updated: 2021/10/25 20:10:27 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-#include <stdio.h>
 
 void	sort_ghost(t_stack *t_ghost)
 {
@@ -41,36 +40,54 @@ void	sort_ghost(t_stack *t_ghost)
 	}
 }
 
-long int	*putintab(int size, char **old_tab)
+void	putintab(t_stack *t_s, char **tab)
 {
-	long int	*tab;
-	int			a;
+	int	a;
 
 	a = 0;
-	tab = (long int *)malloc(sizeof(long int) * size - 1);
-	if (!tab)
-		return (0);
-	while (a < size - 1)
+	t_s->tab = malloc(sizeof(long int) * t_s->size - 1);
+	if (!t_s->tab)
+		return ;
+	while (a < t_s->size - 1)
 	{
-		tab[a] = ft_atoi(old_tab[a + 1]);
+		t_s->tab[a] = ft_atoi(tab[a + 1], t_s);
 		a++;
 	}
-	return (tab);
 }
 
-long int	*init_tab(int size)
+void	init_tab(t_stack *t_stack)
 {
-	long int	*tab;
 	int			a;
 
 	a = 0;
-	tab = (long int *)malloc(sizeof(long int) * size - 1);
-	if (!tab)
-		return (0);
-	while (a < size - 1)
+	t_stack->tab = malloc(sizeof(long int) * t_stack->size - 1);
+	if (!t_stack->tab)
+		return ;
+	while (a < t_stack->size - 1)
 	{
-		tab[a] = 0;
+		t_stack->tab[a] = 0;
 		a++;
 	}
-	return (tab);
+}
+
+void	init_tab_serie(t_stack *t_stack)
+{
+	int			a;
+
+	a = 0;
+	t_stack->tab_serie = malloc(sizeof(long int) * t_stack->size - 1);
+	if (!t_stack->tab_serie)
+		return ;
+	while (a < t_stack->size - 1)
+	{
+		t_stack->tab_serie[a] = 0;
+		a++;
+	}
+}
+
+void	free_the_tablettes(t_stack *t_a, t_stack *t_b, t_stack *t_g)
+{
+	free(t_a->tab);
+	free(t_b->tab);
+	free(t_g->tab);
 }

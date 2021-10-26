@@ -6,24 +6,23 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/28 10:32:03 by emtran            #+#    #+#             */
-/*   Updated: 2021/09/28 10:32:17 by emtran           ###   ########.fr       */
+/*   Updated: 2021/10/25 19:29:05 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-#include <stdio.h>
 
 void	one_two_three_viva_algerie(t_stack *t_stacka)
 {
 	renverse_a(t_stacka);
 }
 
-void 	two_be_three(t_stack *t_stacka)
+void	two_be_three(t_stack *t_stacka)
 {
 	int	pos;
 
 	pos = t_stacka->pos;
-	if (t_stacka->tab[pos] < t_stacka->tab[pos + 1] 
+	if (t_stacka->tab[pos] < t_stacka->tab[pos + 1]
 		&& t_stacka->tab[pos + 1] < t_stacka->tab[pos + 2])
 		return ;
 	if (t_stacka->tab[pos] < t_stacka->tab[pos + 1])

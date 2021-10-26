@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   utils_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/12 14:56:14 by emtran            #+#    #+#             */
-/*   Updated: 2021/10/04 14:43:23 by emtran           ###   ########.fr       */
+/*   Created: 2021/10/22 16:41:05 by emtran            #+#    #+#             */
+/*   Updated: 2021/10/22 16:41:48 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../includes_bonus/push_swap_bonus.h"
 
 void	ft_putstr(char *str, int fd)
 {
@@ -53,7 +53,7 @@ void	ft_putnbr(int nb)
 	ft_putchar(nb % 10 + 48);
 }
 
-long int	ft_atoi(const char *str, t_stack *t_a)
+long int	ft_atoi(const char *str)
 {
 	int			i;
 	long int	a;
@@ -65,7 +65,6 @@ long int	ft_atoi(const char *str, t_stack *t_a)
 	if (str[i] == '\0')
 	{
 		ft_putstr("Error\n", 2);
-		free(t_a->tab);
 		exit(EXIT_FAILURE);
 	}
 	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'

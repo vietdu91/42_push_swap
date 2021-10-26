@@ -1,17 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   errare_humanum_est.c                               :+:      :+:    :+:   */
+/*   errare_humanum_est_bonus.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/12 17:22:11 by emtran            #+#    #+#             */
-/*   Updated: 2021/10/25 20:07:03 by emtran           ###   ########.fr       */
+/*   Created: 2021/10/22 16:38:17 by emtran            #+#    #+#             */
+/*   Updated: 2021/10/25 16:46:13 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
-#include <stdio.h>
+#include "../includes_bonus/push_swap_bonus.h"
 
 int	put_error(void)
 {
@@ -71,26 +70,12 @@ int	check_erratum_arg(long int *tab, int size)
 	return (0);
 }
 
-int	check_erratum_tab(t_stack *t_a, t_stack *t_b, t_stack *t_g)
+int	check_erratum_tab(t_stack *t_stack)
 {
-	int	a;
-
-	if (check_erratum_arg(t_a->tab, t_a->size) == 1)
+	if (check_erratum_arg(t_stack->stacka, t_stack->size) == 1)
 	{
-		free_the_tablettes(t_a, t_b, t_g);
+		free_and_love(t_stack);
 		exit(EXIT_FAILURE);
 	}
-	a = 0;
-	while (a < t_a->size - 3)
-	{
-		if (a == t_a->size - 3)
-		{
-			if (t_a->tab[a] < t_a->tab[a + 1])
-				return (1);
-		}
-		else if (t_a->tab[a] > t_a->tab[a + 1])
-			return (0);
-		a++;
-	}
-	return (1);
+	return (0);
 }

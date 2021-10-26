@@ -6,14 +6,13 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/26 14:56:41 by emtran            #+#    #+#             */
-/*   Updated: 2021/10/11 14:28:37 by emtran           ###   ########.fr       */
+/*   Updated: 2021/10/25 18:15:37 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-#include <stdio.h>
 
-int already_try(t_stack *t_stack)
+int	already_try(t_stack *t_stack)
 {
 	int	a;
 
@@ -74,7 +73,7 @@ int	find_max(t_stack *t_stack)
 
 int	is_the_warrior_of_stack(t_stack *t_stack, int nbr)
 {
-	int a;
+	int	a;
 
 	a = t_stack->pos;
 	while (a < t_stack->size - 1)
@@ -86,9 +85,9 @@ int	is_the_warrior_of_stack(t_stack *t_stack, int nbr)
 	return (1);
 }
 
-int is_the_nain_of_stack(t_stack *t_stack, int nbr)
+int	is_the_nain_of_stack(t_stack *t_stack, int nbr)
 {
-	int a;
+	int	a;
 
 	a = t_stack->pos;
 	while (a < t_stack->size - 1)

@@ -6,12 +6,11 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 13:56:42 by emtran            #+#    #+#             */
-/*   Updated: 2021/10/19 09:21:07 by emtran           ###   ########.fr       */
+/*   Updated: 2021/10/25 20:07:21 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-#include <stdio.h>
 
 void	print_tab_of_longue_serie(t_stack *t_stacka, int pos)
 {
@@ -20,6 +19,7 @@ void	print_tab_of_longue_serie(t_stack *t_stacka, int pos)
 	int	c;
 
 	c = 1;
+	init_tab_serie(t_stacka);
 	t_stacka->tab_serie[0] = t_stacka->tab[pos];
 	tmp = t_stacka->tab[pos];
 	b = pos + 1;
@@ -32,7 +32,7 @@ void	print_tab_of_longue_serie(t_stack *t_stacka, int pos)
 		if (tmp < t_stacka->tab[b])
 		{
 			tmp = t_stacka->tab[b];
-			t_stacka->tab_serie[c] = tmp;		
+			t_stacka->tab_serie[c] = tmp;
 			c++;
 		}
 		b++;
