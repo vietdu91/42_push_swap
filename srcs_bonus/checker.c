@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 16:17:48 by emtran            #+#    #+#             */
-/*   Updated: 2021/10/25 16:43:41 by emtran           ###   ########.fr       */
+/*   Updated: 2021/10/28 18:11:51 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	the_end_of_the_world(t_stack *t_stack)
 {
 	if (t_stack->res == -1)
 		ft_putstr("Error\n", 1);
-	else if (natural_order_of_things(t_stack)
+	else if (natural_order_of_things(t_stack) == 0
 		&& t_stack->pos_b == t_stack->size - 1)
 		ft_putstr("OK\n", 1);
 	else
@@ -77,7 +77,6 @@ int	read_stdout(t_stack *t_stack)
 		}
 		buf[i] = 0;
 		everything_in_its_place(t_stack, buf);
-//		ft_affichage(6, t_stack->stacka, t_stack->stackb);
 	}
 }
 

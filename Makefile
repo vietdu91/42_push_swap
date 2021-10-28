@@ -98,6 +98,7 @@ fclean:
 			rm -f ${NAME}
 			rm -rf ${CHECKER}
 			rm -rf objs
+			rm -rf objs_bonus
 			@printf "$(YELLOW)\nAu fond, est-ce que ranger ça ne revient pas un peu à foutre le bordel dans son désordre ? \n$(RESET)"
 			@printf "$(YELLOW)==============================================================================================\n$(RESET)"
 			@printf "$(GREEN)Que la paix regne sur ton foyer\n\n$(RESET)"

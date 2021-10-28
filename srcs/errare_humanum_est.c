@@ -6,12 +6,11 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 17:22:11 by emtran            #+#    #+#             */
-/*   Updated: 2021/10/25 20:07:03 by emtran           ###   ########.fr       */
+/*   Updated: 2021/10/28 11:30:27 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-#include <stdio.h>
 
 int	put_error(void)
 {

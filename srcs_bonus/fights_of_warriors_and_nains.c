@@ -6,7 +6,7 @@
 /*   By: emtran <emtran@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 18:14:00 by emtran            #+#    #+#             */
-/*   Updated: 2021/10/25 16:37:57 by emtran           ###   ########.fr       */
+/*   Updated: 2021/10/28 17:42:23 by emtran           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	is_the_warrior_of_2_stack(t_stack *t_stack, int nbr)
 {
 	int	i;
 
-	i = t_stack->size - 1;
+	i = t_stack->size - 2;
 	while (i > t_stack->pos_a)
 	{
 		if (t_stack->stacka[i] < nbr)
